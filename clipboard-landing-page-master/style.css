@@ -43,7 +43,7 @@
     display: inline-block;
     border:none;
     font-size:0.83rem;
-
+    outline: none;
 }
 .btn_green{
     color:var(--var-button-white);
