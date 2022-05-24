@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Bai Jamjuree', sans-serif;
+    max-width: 100%;
 
 }
 #comp{
@@ -291,6 +292,7 @@ footer ul li{
         justify-content: center;
         align-items: center;
         gap: 2rem;
+
 
     }
     .top{
