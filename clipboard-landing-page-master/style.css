@@ -43,7 +43,7 @@
     display: inline-block;
     border:none;
     font-size:0.83rem;
-    outline: none;
+    
 }
 .btn_green{
     color:var(--var-button-white);
@@ -53,6 +53,7 @@
 }
 .btn_green:active {
     top: 2px;
+    outline: none;
 }
 .btn_purple{
     color:var(--var-button-white);
@@ -62,6 +63,7 @@
 }
 .btn_purple:active {
     top: 2px;
+    outline: none;
 }
 /*paragraph styling*/
 .para{
