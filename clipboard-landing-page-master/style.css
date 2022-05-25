@@ -53,7 +53,8 @@
 }
 .btn_green:active {
     top: 2px;
-    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
 }
 .btn_purple{
     color:var(--var-button-white);
@@ -63,7 +64,7 @@
 }
 .btn_purple:active {
     top: 2px;
-    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 /*paragraph styling*/
 .para{
