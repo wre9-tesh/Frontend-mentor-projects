@@ -18,6 +18,10 @@ This repo contains my solutions <strong>Frontend-mentor Challanges </strong> alo
 ### Error page
 ![image](https://user-images.githubusercontent.com/96977189/177134162-68d895c2-90af-4920-8f3e-cdc35cdad2e0.png)
 
+### FAQ section
+![image](https://user-images.githubusercontent.com/96977189/184291722-61b3ca0a-c024-401c-81e0-bc7034fae018.png)
+
+
 
 <hr>
 
