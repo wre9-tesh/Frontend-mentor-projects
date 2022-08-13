@@ -21,6 +21,9 @@ This repo contains my solutions <strong>Frontend-mentor Challanges </strong> alo
 ### FAQ section
 ![image](https://user-images.githubusercontent.com/96977189/184291722-61b3ca0a-c024-401c-81e0-bc7034fae018.png)
 
+### StopWatch
+![Stopwatch](file:///paint.png)
+
 
 
 <hr>
