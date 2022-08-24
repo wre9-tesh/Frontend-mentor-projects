@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap');
+
+:root {
+    /*Primary*/
+
+    --bright-blue: hsl(220, 98%, 61%);
+    --gradient-1: hsl(192, 100%, 67%);
+    --gradient-2: hsl(280, 87%, 65%);
+
+    /* Light Theme*/
+    --todo-Heading-Color: hsl(0, 0%, 98%);
+    --background-color:hsl(0, 0%, 98%);
+    --background-pannel-color:#ffffff;
+    --placeholder-text-color:hsl(234, 11%, 52%);
+    --pannel-text:hsl(236, 9%, 61%);
+    --pannel-active-text:hsl(237, 14%, 26%) ;
+    --btn-border-color:hsl(236, 33%, 92%);
+    --shadow-color: hsl(236, 10%, 67%);
+
+
+    /*Dark Theme*/
+}
+.darkMode{
+    --background-color:hsl(235, 21%, 11%);
+    --background-pannel-color:hsl(235, 24%, 19%);
+    --placeholder-text-color:hsl(234, 39%, 85%);
+    --pannel-text: hsl(238, 15%, 45%);
+    --btn-border-color:hsl(233, 14%, 35%);
+    --pannel-active-text:hsl(236, 33%, 92%);
+    --shadow-color: hsl(0, 0%, 18%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--background-color);
+    max-width: 100%;
+}
+
+.desktop{
+    position: relative;
+
+}
+
+ .desktop .img-style{
+     position: absolute;
+    object-fit: cover;
+     width: 100%;
+     height:22rem;
+     z-index: -1;
+}
+
+
+ .heading{
+     display: flex;
+     justify-content: space-between;
+     margin: 0 30%;
+
+     padding: 4rem 0;
+     color: var(--todo-Heading-Color);
+     letter-spacing: 1.1rem;
+     text-transform: uppercase;
+
+ }
+
+.heading #mode{
+    border: none;
+    background:none;
+}
+
+.input-text{
+    margin: 0 30% 2rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+
+    background: var(--background-pannel-color);
+    border-radius: 5px;
+
+}
+
+#todo-input{
+    border-radius: 5px;
+}
+
+/*styling of  adding tasks  btn*/
+.add #addBtn{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+    border: 1px solid var(--btn-border-color) ;
+    background: none;
+    cursor: pointer;
+}
+
+.add #addBtn:hover{
+    background: linear-gradient(135deg,var(--gradient-1),var(--gradient-2)) ;
+}
+
+
+.text-style{
+    height: 3.9rem;
+    flex:3;
+    color: var(--pannel-active-text);
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: 1.2rem;
+    outline: inherit;
+    background-color: var(--background-pannel-color);
+    display: flex;
+    align-items: center;
+
+}
+
+.text-style:hover{
+
+}
+
+.tasks{
+    margin: 0 30%;
+}
+
+.adding-container {
+    display: flex;
+    background-color: var(--background-pannel-color);
+    height:4rem;
+    border-bottom: 1px solid var(--btn-border-color) ;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+}
+
+.checkBtn{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+    border: 1px solid var(--btn-border-color) ;
+    background: none;
+    cursor: pointer;
+}
+.checkBtn:hover{
+    background: linear-gradient(135deg,var(--gradient-1),var(--gradient-2)) ;
+
+}
+
+.strike-through{
+    text-decoration: line-through;
+    text-decoration-color: var(--placeholder-text-color);
+}
+
+
+
+
+.bottom-states-container{
+    margin: 0 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--pannel-text);
+    background: var(--background-pannel-color);
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+
+
+
+}
+
+.bottom-states-container .complete-state:hover{
+    color: var(--pannel-text);
+
+}
+
+
+
+.states{
+    display: flex;
+    cursor: pointer;
+}
+
+.all,.active,.completed{
+    padding: 0 0.6rem;
+}
+
+.bottom-text{
+    margin: 3rem 0;
+    text-align: center;
+    color: var(--pannel-text);
+}

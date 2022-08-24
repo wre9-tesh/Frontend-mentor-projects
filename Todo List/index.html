@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Todo app</title>
+
+</head>
+<body>
+
+<!--background -->
+  <div class="desktop">
+  <img class="img-style" src="./images/bg-desktop-light.jpg" alt="">
+  </div>
+
+
+
+<!--heading logo and dark mode-->
+<div class="heading">
+<h1>
+  Todo
+
+
+</h1>
+  <button id="mode">
+    <img src="./images/icon-moon.svg" alt="light mode">
+  </button>
+</div>
+
+<!--input tab here-->
+
+<div class="input-text">
+  <div class="add">
+    <button id="addBtn" ></button>
+  </div>
+  <input type="text" placeholder="Create a new todo.." name="todo" class="text-style" id="todo-input">
+
+</div>
+
+<!--entered task-->
+
+<div class="tasks">
+
+</div>
+
+<!--bottom container Here containing states-->
+<div class="bottom-states-container">
+  <div id="items">
+  2 items left
+  </div>
+
+  <div class="states">
+   <div class="all">All</div>
+    <div class="Active">Active</div>
+    <div class="completed">Completed</div>
+  </div>
+
+
+  <div class="complete-state">
+  Clear Completed
+  </div>
+</div>
+
+<div class="bottom-text">
+  Click on item to delete.
+</div>
+<script src="script.js">
+
+</script>
+</body>
+</html>
