@@ -3,7 +3,7 @@
 :root {
     /*Primary*/
 
-    --bright-blue: hsl(220, 98%, 61%);
+    --hover-state: hsl(220, 98%, 61%);
     --gradient-1: hsl(192, 100%, 67%);
     --gradient-2: hsl(280, 87%, 65%);
 
@@ -28,6 +28,7 @@
     --btn-border-color:hsl(233, 14%, 35%);
     --pannel-active-text:hsl(236, 33%, 92%);
     --shadow-color: hsl(0, 0%, 18%);
+    --hover-state: hsl(192, 100%, 67%);
 }
 
 *{
@@ -191,6 +192,12 @@ body{
     padding: 0 0.6rem;
 }
 
+.all:hover,.Active:hover,.completed:hover{
+    color:var(--hover-state);
+
+}
+
+
 .bottom-text{
     margin: 3rem 0;
     text-align: center;
@@ -225,4 +232,3 @@ body{
     }
 
 }
-

@@ -10,8 +10,12 @@ const enableDarkmode = () =>{
 
     localStorage.setItem('darkMode','enabled');
 
-   imgEl.innerHTML = ` <img class="img-style" src="./images/bg-desktop-dark.jpg" alt="">`;
-
+    if(window.innerWidth > 800) {
+        imgEl.innerHTML = ` <img class="img-style" src="./images/bg-desktop-dark.jpg" alt="">`;
+    }
+    else{
+        imgEl.innerHTML = ` <img class="img-style" src="./images/bg-mobile-dark.jpg" alt="">`;
+    }
     modeEl.innerHTML =` <img src="./images/icon-sun.svg" alt="light mode">`
 };
 
@@ -20,8 +24,13 @@ const disableDarkmode = () =>{
     document.body.classList.remove("darkMode");
 
     localStorage.setItem('darkMode','disabled');
+    if(window.innerWidth > 800) {
+        imgEl.innerHTML = ` <img class="img-style" src="./images/bg-desktop-light.jpg" alt="">`;
+    }
+    else{
+        imgEl.innerHTML = ` <img class="img-style" src="./images/bg-mobile-light.jpg" alt="">`;
+    }
 
-    imgEl.innerHTML = ` <img class="img-style" src="./images/bg-desktop-light.jpg" alt="">`;
 
     modeEl.innerHTML =` <img src="./images/icon-moon.svg" alt="light mode">`
 
@@ -128,8 +137,7 @@ addBtnEl.addEventListener('click', () =>{
 
                    for (let i=0;i<completeTask.length;i++){
                        completeTask[i].remove();
-                       count--;
-                       countEL.innerText =count  + ' ' ;
+
                    }
             })
 
