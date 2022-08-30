@@ -2,6 +2,12 @@
 let darkMode = localStorage.getItem('darkMode');
 const modeEl = document.getElementById('mode');
 const imgEl = document.querySelector('.desktop');
+const statesEl = document.querySelector('.states');
+
+if(window.innerWidth < 800){
+    statesEl.style.display ='none';
+}
+
 
 
 const enableDarkmode = () =>{
@@ -12,9 +18,11 @@ const enableDarkmode = () =>{
 
     if(window.innerWidth > 800) {
         imgEl.innerHTML = ` <img class="img-style" src="./images/bg-desktop-dark.jpg" alt="">`;
+
     }
     else{
         imgEl.innerHTML = ` <img class="img-style" src="./images/bg-mobile-dark.jpg" alt="">`;
+
     }
     modeEl.innerHTML =` <img src="./images/icon-sun.svg" alt="light mode">`
 };
@@ -26,9 +34,12 @@ const disableDarkmode = () =>{
     localStorage.setItem('darkMode','disabled');
     if(window.innerWidth > 800) {
         imgEl.innerHTML = ` <img class="img-style" src="./images/bg-desktop-light.jpg" alt="">`;
+
+
     }
     else{
         imgEl.innerHTML = ` <img class="img-style" src="./images/bg-mobile-light.jpg" alt="">`;
+
     }
 
 
@@ -122,8 +133,7 @@ addBtnEl.addEventListener('click', () =>{
 
             if(taskText.parentElement.classList.contains('strike-through')) {
                 taskText.parentElement.remove();
-                count--;
-                countEL.innerText =count  + ' ' ;
+
             }
         })
 
@@ -167,8 +177,6 @@ addBtnEl.addEventListener('click', () =>{
             for (let i=0;i<completeTask.length;i++){
                 completeTask[i].style.display='flex';
             }
-
-
         })
 
     //    complete state
@@ -229,7 +237,7 @@ window.addEventListener('keydown',(e)=>{
             checkBtn.addEventListener('click', () => {
                 if (strike === 'disable') {
                     checkBtn.parentElement.classList.add('strike-through');
-                    console.log(checkBtn)
+
                     strike = 'enable';
                 } else {
                     checkBtn.parentElement.classList.remove('strike-through');

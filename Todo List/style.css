@@ -205,6 +205,10 @@ body{
 }
 
 
+.states-container-mobile{
+    display: none;
+}
+
 @media screen and (max-width: 1200px){
 
     .input-text{
@@ -230,5 +234,25 @@ body{
     .heading{
         margin: 0 20%;
     }
+
+}
+
+
+@media screen and (max-width: 800px){
+
+
+.states-container-mobile{
+    display: flex;
+    cursor: pointer;
+    margin: 3% 20%;
+    justify-content: space-between;
+    padding: 0.9rem 2rem;
+
+    background: var(--background-pannel-color);
+    color: var(--pannel-text);
+    border-radius: 5px;
+
+
+}
 
 }
