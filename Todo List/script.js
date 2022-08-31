@@ -204,48 +204,130 @@ addBtnEl.addEventListener('click', () =>{
 
 //shall be updated after above code is complete.
 window.addEventListener('keydown',(e)=>{
-    if(e.code === 'Enter' || e.code === 'NumpadEnter') {
+    if(e.code === 'Enter' || e.code === 'NumpadEnter')  if (taskConatiner.value === "") {
+        alert("Please enter a task first");
+    }
+    else {
+        count++
+    countEL.innerText =count  + ' ' ;
 
-        if (taskConatiner.value === "") {
-            alert("Please enter a task first");
-        } else {
-            let mainConatiner = document.createElement('div');
-            mainConatiner.classList.add('adding-container');
-            newTaskContainer.appendChild(mainConatiner);
+        let mainConatiner = document.createElement('div');
+        mainConatiner.classList.add('adding-container');
+        newTaskContainer.appendChild(mainConatiner);
 
 // Adding check buttons
-            let checkBtn = document.createElement("button");
+        let checkBtn = document.createElement("button");
 
-            checkBtn.classList.add("checkBtn");
+        checkBtn.classList.add("checkBtn");
 
-            mainConatiner.appendChild(checkBtn);
+        mainConatiner.appendChild(checkBtn);
 
-            //Adding text
-            let taskText = document.createElement('div');
-            taskText.classList.add('text-style');
+        //Adding text
+        let taskText = document.createElement('div');
+        taskText.classList.add('text-style');
 
-            taskText.textContent = `${taskConatiner.value}`;
+        taskText.textContent = `${taskConatiner.value}`;
 
-            mainConatiner.appendChild(taskText);
+        mainConatiner.appendChild(taskText);
+
+        taskConatiner.value = "";
+
+        // to display task as completed
+        let strike = 'disable';
+
+        checkBtn.addEventListener('click', () => {
+            if (strike === 'disable') {
+                checkBtn.parentElement.classList.add('strike-through');
+
+                count--;
+                countEL.innerText =count  + ' ' ;
+
+                strike = 'enable';
+                taskText.style.color = "var(--placeholder-text-color)";
+                checkBtn.innerHTML = `<img src="./images/icon-check.svg" alt="">`
+                checkBtn.style.background ='linear-gradient(135deg,var(--gradient-1),var(--gradient-2))';
 
 
-            taskConatiner.value = "";
+            } else {
 
-            // to display task as completed
-            let strike = 'disable';
+                checkBtn.parentElement.classList.remove('strike-through');
+                strike = 'disable';
+                taskText.style.color = "var(--pannel-active-text)";
+                checkBtn.innerHTML =``;
+                checkBtn.style.background =`none`;
 
-            checkBtn.addEventListener('click', () => {
-                if (strike === 'disable') {
-                    checkBtn.parentElement.classList.add('strike-through');
+                count++;
+                countEL.innerText =count  + ' ' ;
+            }
+        })
 
-                    strike = 'enable';
-                } else {
-                    checkBtn.parentElement.classList.remove('strike-through');
-                    strike = 'disable';
-                }
+    //    delete btn here
+        taskText.addEventListener('click',()=>{
+
+            if(taskText.parentElement.classList.contains('strike-through')) {
+                taskText.parentElement.remove();
+
+            }
+        })
+
+    //    delete all btn
+
+        let deleteAll = document.querySelector('.complete-state');
+
+            deleteAll.addEventListener('click',()=>{
+
+                   let completeTask = document.getElementsByClassName('strike-through');
+
+                   for (let i=0;i<completeTask.length;i++){
+                       completeTask[i].remove();
+
+                   }
             })
 
-        }
+    //three states
+
+            //Active state
+            let activeEl = document.querySelector('.Active');
+
+
+            activeEl.addEventListener('click',()=>{
+                let completeTask = document.getElementsByClassName('strike-through');
+
+                for (let i=0;i<completeTask.length;i++){
+                    completeTask[i].style.display='none';
+                }
+
+
+            })
+
+    //  All state
+        let allEl = document.querySelector('.all');
+
+
+        allEl.addEventListener('click',()=>{
+            let completeTask = document.getElementsByClassName('adding-container');
+
+            for (let i=0;i<completeTask.length;i++){
+                completeTask[i].style.display='flex';
+            }
+        })
+
+    //    complete state
+        let completeEl = document.querySelector('.completed');
+
+        completeEl.addEventListener('click',()=>{
+            let completeTask = document.getElementsByClassName('adding-container');
+
+
+            for (let i=0;i<completeTask.length;i++) {
+                if (completeTask[i].classList.contains('strike-through')) {
+                    completeTask[i].style.display = 'flex';
+                } else {
+                    completeTask[i].style.display = 'none';
+                }
+            }
+        })
+
 
     }})
 
