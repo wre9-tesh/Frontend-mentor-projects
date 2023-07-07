@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("./assets/images/pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(8px);
+}
+
+.boundary{
+    border-radius: 1rem 1rem 5rem 1rem ;
+    margin: 20%;
+    padding: 5%;
+    background: #ffffff;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+}
+
+.button:hover{
+    background:hsl(259, 100%, 65%) ;
+
+}
+
+.age{
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.yrs,.mon,.day{
+    display: inline;
+    color:hsl(259, 100%, 65%) ;
+}
+
+input[type="number"]{
+    outline: none;
+    border : 1px solid hsl(0, 0%, 94%);
+    border-radius: 4px;
+    width: 6rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+label{
+    font-size: 12px;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+
+.form-arrangement{
+    display: flex;
+    flex-direction: column;
+}
